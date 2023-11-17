@@ -28,21 +28,21 @@ icon.addEventListener("click",e=>{
 function conectarMySQL() {
     var usuario = document.getElementById("email").value
     var contra = document.getElementById("password").value
-
+    
     const conexion = mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: 'Musica1234',
         database: 'ejemplo'
     })
-
+    
     conexion.connect((err) => {
         if (err) {
             console.error('Error en la conexión:', err);
             alert('Error en la conexión. Verifica la configuración.');
             return; // Detener la ejecución si hay un error de conexión.
         }
-
+        
         console.log('Conexion establecida');
 
         const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
