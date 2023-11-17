@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
-    <script src="validacion.js"></script>
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -16,18 +16,21 @@
             <input type="text" required id="nombre">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Nombre</label>
+            <label>Correo Electrónico</label>
           </div>
           
           <div class="group">      
-            <input type="text" required id="passw">
+            <input type="password" required name="password" id="password">
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Contraseña</label>
+            <button class="btn btn-primary" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
           </div>
           <button type="submit">Iniciar Sesión</button>
         </form>
         
       </div>
+
 </body>
+
 </html>
