@@ -44,7 +44,6 @@ function autenticar() {
 function registro(){
     const sqlQuery = "INSERT INTO tabla (user, contra) VALUES (?, ?)";
 
-    // Parámetros para la consulta preparada
     const params = [usuario, contra];
 
     conexion.query(sqlQuery, params, (err, result) => {
