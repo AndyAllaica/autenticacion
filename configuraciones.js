@@ -28,6 +28,7 @@ icon.addEventListener("click",e=>{
 function conectarMySQL() {
     var usuario = document.getElementById("email").value
     var contra = document.getElementById("password").value
+    alert('Sin conexion')
     const mysql = require('mysql')
     const conexion = mysql.createConnection({
         host: 'localhost',
