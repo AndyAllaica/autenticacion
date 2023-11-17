@@ -32,8 +32,9 @@ function conectarMySQL() {
 }
 
 function registro(){
-    var usuario = document.getElementById("email").value
-    var contra = document.getElementById("password").value
+    var nom = document.getElementById("productName").value
+    var pre = document.getElementById("productPrice").value
+    var cat = document.getElementById("productCat").value
     const mysql = require('mysql')
     const conexion = mysql.createConnection({
         host: 'localhost',
@@ -47,15 +48,19 @@ function registro(){
         console.log('Conexion establecida')
     })
 
-    conexion.query("INSERT INTO producto ='" + usuario + "' AND contra='" + contra + "'", (err, rows) => {
+    const sqlQuery = "INSERT INTO producto (nombre,precio,categoria) VALUES(?,?,?)";
+
+    const params = [nom, pre, cat];
+
+    conexion.query(sqlQuery, params, (err) => {
         if (err) {
             console.error('Error en la autenticación:', err);
-            alert('El producto no se pudo añadir.');
+            alert('No se pudo agregar el producto.');
         } else {
-            alert('Producto añadido.');
+            alert('Producto agregado.');
         }
 
         conexion.end();
     })
-    d
+
 }
