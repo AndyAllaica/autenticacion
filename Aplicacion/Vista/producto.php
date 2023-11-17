@@ -11,7 +11,13 @@
 <body>
     <header>
         <h1>Agregar Productos</h1>
-        <button id="miBoton">Salir</button>
+        <button id="miBoton" onclick="redireccionar()">Salir</button>
+        <script>
+        function redireccionar() {
+            // Cambia "nueva_pagina.html" por la URL de la página a la que quieres redirigir
+            window.location.href = "../index.php";
+        }
+    </script>
         
     </header>
 
