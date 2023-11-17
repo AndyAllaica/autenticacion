@@ -17,13 +17,8 @@ conexion.query('SELECT * FROM usuario', (err, rows)=>{
     console.log('Los datos solicitados son:')
     console.log(rows)
 })
-<<<<<<< HEAD
 
-
-
-conexion.end();
-=======
-//Hola
-conexion.end();
 }
->>>>>>> c09f11c (Conexion button)
+
+
+conexion.end();
