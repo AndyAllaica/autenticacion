@@ -18,7 +18,6 @@ conexion.query('SELECT * FROM usuario', (err, rows)=>{
     console.log(rows)
 })
 
-}
 
 
 conexion.end();
