@@ -1,4 +1,5 @@
-const mysql = require('mysql')
+function iniciarSesion(){
+    const mysql = require('mysql')
 const conexion = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -16,7 +17,13 @@ conexion.query('SELECT * FROM usuario', (err, rows)=>{
     console.log('Los datos solicitados son:')
     console.log(rows)
 })
+<<<<<<< HEAD
 
 
 
 conexion.end();
+=======
+//Hola
+conexion.end();
+}
+>>>>>>> c09f11c (Conexion button)
