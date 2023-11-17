@@ -7,7 +7,7 @@ function mostrarContrasena(){
       }
   }
 
-function conectarMySQL() {
+function autenticar() {
     var usuario = document.getElementById("email").value;
     var contra = document.getElementById("password").value;
 
