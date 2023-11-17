@@ -10,7 +10,7 @@ $stmt = mysqli_prepare($conexion, $sql);
 
 // Vincular los parámetros
 mysqli_stmt_bind_param($stmt, "ss", $correo, $contrasena);
-
+ 
 // Ejecutar la consulta
 mysqli_stmt_execute($stmt);
 
