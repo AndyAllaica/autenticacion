@@ -5,7 +5,7 @@ const conexion = mysql.createConnection({
     password:'Jonandres07',
     database:'oaaa'
 })
-//uwu
+//uwu buena noches
 //aaaa
 conexion.connect((err)=>{
     if(err) throw err
