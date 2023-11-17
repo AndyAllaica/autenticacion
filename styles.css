@@ -1,6 +1,9 @@
 body {
     font-family:'Roboto';
-    background-color: rgba(0, 135, 131, 0.8);  /* Puedes reemplazar 'tu-imagen-de-fondo.jpg' con la ruta de tu propia imagen de fondo */
+    /*background-color: rgba(0, 135, 131, 0.8);  /* Puedes reemplazar 'tu-imagen-de-fondo.jpg' con la ruta de tu propia imagen de fondo */
+    background-image: url("Fondo2.jpeg");
+    background-size: cover;
+    
     margin: 0;
     display: flex;
     justify-content: center;
