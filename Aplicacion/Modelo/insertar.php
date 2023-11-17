@@ -21,12 +21,13 @@ $resultado = mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 */
 $sql="INSERT INTO productos(nombre, precio, categoria) values('$nombre','$precio','$categoria')";
-mysqli_query($conexion,$sql);
+$resultado=mysqli_query($conexion,$sql);
 // Verificar si la inserción fue exitosa
 if ($resultado) {
     ?>
     <script>
       alert("El producto se ha insertado correctamente.")
+      //window.location.href = "../Vista/producto.php";
     </script>
     <?php
 } else {
@@ -34,9 +35,7 @@ if ($resultado) {
     ?>
     <script>
       alert("Error en agregar el producto.")
-
-            // Cambia "nueva_pagina.html" por la URL de la página a la que quieres redirigir
-            header("Location: ../index.php");
+      //window.location.href = "../Vista/producto.php";
     </script>
     <?php
 }
