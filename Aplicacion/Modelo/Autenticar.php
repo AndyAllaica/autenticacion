@@ -30,7 +30,7 @@ if (mysqli_num_rows($resultado) > 0) {
  } else {
      ?>
           <script>
-               alert("Conexion fallida");
+               alert("El usuario no se encuentra registrado");
           </script>
      <?php
  }
