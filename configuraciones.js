@@ -39,6 +39,7 @@ function conectarMySQL() {
     conexion.connect((err) => {
         if (err) throw err
         console.log('Conexion establecida')
+        alert('Sin conexion')
     })
 
     const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
