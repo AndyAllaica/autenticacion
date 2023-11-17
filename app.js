@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 app.post('/autenticar', (req, res) => {
     const { correo, contra } = req.body;
-    const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
+    const sqlQuery = "SELECT * FROM ejemplo.usuario WHERE correo = ? AND contra = ?";
 
     const params = [correo, contra];
 
@@ -47,7 +47,7 @@ app.post('/autenticar', (req, res) => {
 
 app.post('/registro', (req, res) => {
     const { nombre, precio, categoria } = req.body;
-    const sqlQuery = "INSERT INTO producto (nombre, precio, categoria) VALUES (?, ?, ?)";
+    const sqlQuery = "INSERT INTO ejemplo.producto(nombre, precio, categoria) VALUES (?, ?, ?)";
 
     const params = [nombre, precio, categoria];
 
