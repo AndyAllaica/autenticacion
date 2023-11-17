@@ -33,5 +33,6 @@ if (mysqli_num_rows($resultado) > 0) {
                alert("Conexion fallida");
           </script>
      <?php
+     header("Location: ../index.php");
  }
 ?>
