@@ -1,7 +1,7 @@
 
 
 document.getElementById('datos').addEventListener('submit', function(event) {
-    // Evitar que el formulario se envíe de la manera predeterminada
+    // Evitar que el formulario se envíe de la manera predeterminad
     event.preventDefault();
 
     // Obtener los valores de los campos del formulario
