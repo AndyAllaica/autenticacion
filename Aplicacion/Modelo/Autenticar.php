@@ -5,7 +5,7 @@ $contrasena = $_POST['password'];
 include("../Config/conexion.php");
 
 // Utilizar consultas preparadas para prevenir SQL injection
-$sql = "SELECT * FROM usuario WHERE correo = ? AND passw = ?";
+/*$sql = "SELECT * FROM usuario WHERE correo = ? AND passw = ?";
 $stmt = mysqli_prepare($conexion, $sql);
 
 // Vincular los parámetros
@@ -19,7 +19,9 @@ $resultado = mysqli_stmt_get_result($stmt);
 
 // Cerrar la consulta preparada
 mysqli_stmt_close($stmt);
-
+*/
+$sql= "SELECT *from usuario WHERE correo=$id AND passw = $contrasena"; 
+$resultado=mysqli_query($conexion,$sql);
 // Incluir la vista de la tabla
 if (mysqli_num_rows($resultado) > 0) {
      // Si hay resultado, redirigir a producto.php
