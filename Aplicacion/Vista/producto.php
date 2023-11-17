@@ -22,7 +22,7 @@
             <input type="number" name="productPrice" id="productPrice" step="1.00" required>
 
             <label for="productImage">Categoria:</label>
-            <input type="url" name="productCat" id="productCat" required>
+            <input type="text" name="productCat" id="productCat" required>
 
             <center><button type="submit">Agregar Producto</button></center>
         </form>
