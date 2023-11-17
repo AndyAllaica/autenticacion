@@ -34,10 +34,9 @@ if ($resultado) {
     ?>
     <script>
       alert("Error en agregar el producto.")
-      function redireccionar() {
+
             // Cambia "nueva_pagina.html" por la URL de la página a la que quieres redirigir
-            window.location.href = "../index.php";
-        }
+            header("Location: ../index.php");
     </script>
     <?php
 }
