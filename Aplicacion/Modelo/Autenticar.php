@@ -1,6 +1,6 @@
 <?php
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
+$correo = $_POST['email'];
+$contrasena = $_POST['password'];
 
 include("../Config/conexion.php");
 

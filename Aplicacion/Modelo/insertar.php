@@ -2,9 +2,9 @@
 include("../Config/conexion.php");
 
 // Obtener los datos del formulario
-$nombre = $_POST['nombre'];
-$precio = $_POST['precio'];
-$categoria = $_POST['categoria'];
+$nombre = $_POST['productName'];
+$precio = $_POST['productPrice'];
+$categoria = $_POST['productCat'];
 
 // Utilizar consultas preparadas para prevenir SQL injection
 $sql = "INSERT INTO producto (nombre, precio, categoria) VALUES (?, ?, ?)";

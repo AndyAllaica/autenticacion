@@ -14,7 +14,7 @@
     </header>
 
     <div class="container">
-        <form id="productForm">
+        <form id="productForm"  action="../Modelo/insertar.php" method="POST">
             <label for="productName">Nombre del Producto:</label>
             <input type="text" id="productName" required>
 

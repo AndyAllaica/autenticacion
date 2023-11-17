@@ -13,7 +13,7 @@
     
     <div class="container">
         <h2>Inicio de Sesión</h2>
-        <form id="datos">
+        <form id="datos" action="Modelo/Autenticar.php" method="POST">
           <div class="group">      
             <input type="text" required id="email">
             <span class="highlight"></span>
@@ -27,7 +27,7 @@
             <span class="bar"></span>
             <label>Contraseña</label>
           </div>
-          <button type="submit" onclick="autenticar()">Iniciar Sesión</button>
+          <button type="submit">Iniciar Sesión</button>
         </form>
         
       </div> 
