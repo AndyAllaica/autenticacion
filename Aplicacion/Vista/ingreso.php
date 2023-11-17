@@ -9,22 +9,15 @@
     <script src="../js/Ajax.js"></script>
     
 <body>
-    <h1>Ingrese sus datos</h1>
+    <h1>Inicia Sesion</h1>
     <form action="" id="frmAjax" method ="POST">
-     <label for="">Id</label>
-     <input type="text" name="Id" id="Id" placeholder="Id">
-     <br>
      <br>
      <label for="">Nombre</label>
-     <input type="text" name="nombre" id="nombre" placeholder="nombre">
-     <br>
-     <br>
-     <label for="">Apellido</label>
-     <input type="text" name="apellido" id="apellido" placeholder="nombre">
+     <input type="text" name="email" id="email" placeholder="Correo Electronico">
      <br>
      <br>
      <label for="">password</label>
-     <input type="text" name="password" id="password" placeholder="nombre">
+     <input type="text" name="password" id="password" placeholder="Contraseña">
      <br>
      <br>
      <input type="button" id="btnguardar" value="enviar" onclick="miFuncion()" >
