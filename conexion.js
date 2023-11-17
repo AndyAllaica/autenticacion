@@ -11,7 +11,7 @@ conexion.connect((err)=>{
     console.log('Conexion establecida')
 })
 
-conexion.query('SELECT * FROM tabla WHERE idTabla=1 AND texto=\'Hola\'', (err, rows)=>{
+conexion.query('SELECT * FROM usuario', (err, rows)=>{
     if(err) throw err
     console.log('Los datos solicitados son:')
     console.log(rows)

@@ -11,24 +11,22 @@
     
     <div class="container">
         <h2>Inicio de Sesión</h2>
-        <form>
+        <form id="datos">
+          <div class="group">      
+            <input type="text" required id="nombre">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Name</label>
+          </div>
+          
           <div class="group">      
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Correo Electrónico</label>
-          </div>
-          
-          <div class="group">      
-            <input type="password" required name="password" id="password">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Contraseña</label>
-            <button class="btn btn-primary" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
+            <label>Email</label>
           </div>
           <button type="submit">Iniciar Sesión</button>
         </form>
-
         
       </div>
 
