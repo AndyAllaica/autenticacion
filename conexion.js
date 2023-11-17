@@ -3,8 +3,8 @@ function conectarMySQL() {
     const conexion = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: 'Jonandres07',
-        database: 'prueba'
+        password: 'Musica1234',
+        database: 'ejemplo'
     })
 
     conexion.connect((err) => {
