@@ -57,4 +57,5 @@ function registro(){
 
         conexion.end();
     })
+    d
 }
