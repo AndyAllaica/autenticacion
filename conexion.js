@@ -17,12 +17,11 @@ function conectarMySQL() {
     conexion.query("SELECT * FROM tabla WHERE user='" + usuario + "' AND contra='" + contra + "'", (err, rows) => {
         if (err) {
             console.error('Error en la autenticación:', err);
-            // Mostrar mensaje de autenticación fallida
             alert('Autenticación fallida. Verifica tus credenciales.');
         } else {
             console.log('Los datos solicitados son:', rows);
-            // Redirigir a otra página en caso de éxito
-            window.location.href = 'otra_pagina.html';
+            
+            window.location.href = 'producto.html';
         }
 
         conexion.end();
@@ -30,5 +29,5 @@ function conectarMySQL() {
 }
 
 function registro(){
-
+    
 }
