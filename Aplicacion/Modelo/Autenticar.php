@@ -1,0 +1,35 @@
+<?php
+$correo = $_POST['correo'];
+$contrasena = $_POST['contrasena'];
+
+include("../Config/conexion.php");
+
+// Utilizar consultas preparadas para prevenir SQL injection
+$sql = "SELECT * FROM usuario WHERE correo = ? AND contrasena = ?";
+$stmt = mysqli_prepare($conexion, $sql);
+
+// Vincular los parámetros
+mysqli_stmt_bind_param($stmt, "ss", $correo, $contrasena);
+
+// Ejecutar la consulta
+mysqli_stmt_execute($stmt);
+
+// Obtener el resultado
+$resultado = mysqli_stmt_get_result($stmt);
+
+// Cerrar la consulta preparada
+mysqli_stmt_close($stmt);
+
+// Incluir la vista de la tabla
+if (mysqli_num_rows($resultado) > 0) {
+     // Si hay resultado, redirigir a producto.php
+     header("Location: ../Vista/producto.php");
+     exit();
+ } else {
+     ?>
+          <script>
+               alert("Conexion fallida");
+          </script>
+     <?php
+ }
+?>
