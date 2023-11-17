@@ -29,7 +29,6 @@ if ($resultado) {
       alert("El producto se ha insertado correctamente.")
     </script>
     <?php
-    header("Location: ../Vista/producto.php");
 } else {
     echo "Error en la inserción: " . mysqli_error($conexion);
     ?>
@@ -37,7 +36,6 @@ if ($resultado) {
       alert("Error en agregar el producto.")
     </script>
     <?php
-    header("Location: ../Vista/producto.php");
 }
 
 // Cerrar la conexión
