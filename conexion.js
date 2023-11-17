@@ -16,5 +16,7 @@ conexion.query('SELECT * FROM usuario', (err, rows)=>{
     console.log('Los datos solicitados son:')
     console.log(rows)
 })
-//Hola
+
+
+
 conexion.end();
