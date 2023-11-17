@@ -7,6 +7,7 @@ $precio = $_POST['productPrice'];
 $categoria = $_POST['productCat'];
 
 // Utilizar consultas preparadas para prevenir SQL injection
+/*
 $sql = "INSERT INTO productos(nombre, precio, categoria) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($conexion, $sql);
 
@@ -18,7 +19,9 @@ $resultado = mysqli_stmt_execute($stmt);
 
 // Cerrar la consulta preparada
 mysqli_stmt_close($stmt);
-
+*/
+$sql="INSERT INTO productos(nombre, precio, categoria) values('$nombre','$precio','$categoria')";
+mysqli_query($conexion,$sql);
 // Verificar si la inserción fue exitosa
 if ($resultado) {
     ?>
