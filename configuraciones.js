@@ -28,8 +28,7 @@ icon.addEventListener("click",e=>{
 function conectarMySQL() {
     var usuario = document.getElementById("email").value
     var contra = document.getElementById("password").value
-    alert('Sin conexion')
-    const mysql = require('mysql')
+
     const conexion = mysql.createConnection({
         host: 'localhost',
         user: 'root',
@@ -38,26 +37,30 @@ function conectarMySQL() {
     })
 
     conexion.connect((err) => {
-        if (err) throw err
-        console.log('Conexion establecida')
-        alert('Sin conexion')
-    })
-
-    const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
-
-    const params = [usuario, contra];
-
-    conexion.query(sqlQuery, params, (err, rows) => {
         if (err) {
-            console.error('Error en la autenticación:', err);
-            alert('Autenticación fallida. Verifica tus credenciales.');
-        } else {
-            console.log('Los datos solicitados son:', rows);
-            window.location.href = 'producto.html';
+            console.error('Error en la conexión:', err);
+            alert('Error en la conexión. Verifica la configuración.');
+            return; // Detener la ejecución si hay un error de conexión.
         }
 
-        conexion.end();
-    })
+        console.log('Conexion establecida');
+
+        const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
+
+        const params = [usuario, contra];
+
+        conexion.query(sqlQuery, params, (err, rows) => {
+            if (err) {
+                console.error('Error en la autenticación:', err);
+                alert('Autenticación fallida. Verifica tus credenciales.');
+            } else {
+                console.log('Los datos solicitados son:', rows);
+                window.location.href = 'producto.html';
+            }
+
+            conexion.end();
+        })
+    });
 }
 
 function registro(){
