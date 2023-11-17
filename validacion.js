@@ -6,11 +6,11 @@ document.getElementById('datos').addEventListener('submit', function(event) {
 
     // Obtener los valores de los campos del formulario
     var nombre = document.getElementById('nombre').value;
-    var correo = document.getElementById('correo').value;
+    var password = document.getElementById('password').value;
 
     // Realizar cualquier acción con los datos, por ejemplo, imprimir en la consola
     console.log('Nombre:', nombre);
-    console.log('Correo electrónico:', correo);
+    console.log('Correo electrónico:', password);
 
     // Puedes realizar otras acciones aquí, como enviar los datos a un servidor mediante AJAX
 });
