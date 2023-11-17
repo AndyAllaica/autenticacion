@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style2.css">
-    <script src="/configuraciones.js"></script>
+    <script src="../configuraciones.js"></script>
     <title>Tienda de Productos</title>
 
 </head> 
