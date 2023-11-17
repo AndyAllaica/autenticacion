@@ -14,13 +14,16 @@ function conectarMySQL() {
         console.log('Conexion establecida')
     })
 
-    conexion.query("SELECT * FROM tabla WHERE user='" + usuario + "' AND contra='" + contra + "'", (err, rows) => {
+    const sqlQuery = "SELECT * FROM tabla WHERE user = ? AND contra = ?";
+
+    const params = [usuario, contra];
+
+    conexion.query(sqlQuery, params, (err, rows) => {
         if (err) {
             console.error('Error en la autenticación:', err);
             alert('Autenticación fallida. Verifica tus credenciales.');
         } else {
             console.log('Los datos solicitados son:', rows);
-            
             window.location.href = 'producto.html';
         }
 
