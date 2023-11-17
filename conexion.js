@@ -16,5 +16,5 @@ conexion.query('SELECT * FROM tabla WHERE idTabla=1 AND texto=\'Hola\'', (err, r
     console.log('Los datos solicitados son:')
     console.log(rows)
 })
-
+//Hola
 conexion.end();
