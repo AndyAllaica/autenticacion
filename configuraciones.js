@@ -1,3 +1,22 @@
+let mysql = require("mysql");
+
+let conexion = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Musica1234",
+    database: "ejemplo",
+    port: "3307"
+})
+
+conexion.connect(function(error){
+    if (error){
+        throw error;
+    }
+    else{
+        console.log("Conexion existosa");
+    }
+})
+
 function mostrarContrasena(){
       var tipo = document.getElementById("password");
       if(tipo.type == "password"){
@@ -8,54 +27,32 @@ function mostrarContrasena(){
   }
 
 function autenticar() {
-    var usuario = document.getElementById("email").value;
-    var contra = document.getElementById("password").value;
+    const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
 
-    fetch('/autenticar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ correo: usuario, contra: contra })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        if (data.autenticado) {
-            window.location.href = 'producto.html';
-        } else {
-            alert('Autenticación fallida. Verifica tus credenciales.');
-        }
-    })
-    .catch(error => {
-        console.error('Error en la solicitud:', error);
-        alert('Error en la solicitud al servidor.');
-    });
+        const params = [usuario, contra];
+
+        conexion.query(sqlQuery, params, (err, rows) => {
+            if (err) {
+                console.error('Error en la autenticación:', err);
+                alert('Autenticación fallida. Verifica tus credenciales.');
+            } else {
+                window.location.href = 'producto.html';
+            }
+        })
 }
 
 function registro(){
-    var nom = document.getElementById("productName").value;
-    var pre = document.getElementById("productPrice").value;
-    var cat = document.getElementById("productCat").value;
+    const sqlQuery = "INSERT INTO tabla (user, contra) VALUES (?, ?)";
 
-    fetch('/registro', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ nombre: nom, precio: pre, categoria: cat })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        if (data.insertado) {
-            alert('Producto registrado exitosamente.');
+    const params = [usuario, contra];
+
+    conexion.query(sqlQuery, params, (err, result) => {
+        if (err) {
+            console.error('Error al insertar datos:', err);
+            alert('Error al insertar datos.');
         } else {
-            alert('No se pudo registrar el producto.');
+            console.log('Datos insertados correctamente. ID del nuevo registro:', result.insertId);
+            alert("Datos insertados")
         }
     })
-    .catch(error => {
-        console.error('Error en la solicitud:', error);
-        alert('Error en la solicitud al servidor.');
-    });
 }
