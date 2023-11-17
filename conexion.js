@@ -5,9 +5,7 @@ const conexion = mysql.createConnection({
     password:'Jonandres07',
     database:'oaaa'
 })
-//uwu buena noches
-//aaaa
-//jajajaja
+
 conexion.connect((err)=>{
     if(err) throw err
     console.log('Conexion establecida')
