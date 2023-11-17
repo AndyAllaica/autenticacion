@@ -5,7 +5,7 @@ $contrasena = $_POST['password'];
 include("../Config/conexion.php");
 
 // Utilizar consultas preparadas para prevenir SQL injection
-$sql = "SELECT * FROM usuario WHERE correo = ? AND contrasena = ?";
+$sql = "SELECT * FROM usuario WHERE correo = ? AND passw = ?";
 $stmt = mysqli_prepare($conexion, $sql);
 
 // Vincular los parámetros
