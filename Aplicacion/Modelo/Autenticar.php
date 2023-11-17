@@ -31,6 +31,7 @@ if (mysqli_num_rows($resultado) > 0) {
      ?>
           <script>
                alert("El usuario no se encuentra registrado");
+               window.location.href = "../index.php";
           </script>
      <?php
  }
