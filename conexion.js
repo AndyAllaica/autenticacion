@@ -14,7 +14,7 @@ function conectarMySQL() {
         console.log('Conexion establecida')
     })
 
-    const sqlQuery = "SELECT * FROM tabla WHERE user = ? AND contra = ?";
+    const sqlQuery = "SELECT * FROM usuario WHERE correo = ? AND contra = ?";
 
     const params = [usuario, contra];
 
