@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Tienda de Productos</title>
+
+</head>
+<body>
+    <header>
+        <h1>Agregar Productos</h1>
+    </header>
+
+    <div class="container">
+        <form id="productForm">
+            <label for="productName">Nombre del Producto:</label>
+            <input type="text" id="productName" required>
+
+            <label for="productPrice">Precio del Producto:</label>
+            <input type="number" id="productPrice" step="0.01" required>
+
+            <label for="productImage">Categoria:</label>
+            <input type="url" id="productCat" required>
+
+            <center><button type="button" onclick="">Agregar Producto</button></center>
+        </form>
+
+        <!-- <div class="product">
+            <img src="producto1.jpg" alt="Producto 1">
+            <div class="product-info">
+                <div class="product-title">Producto 1</div>
+                <div class="product-price">$19.99</div>
+            </div>
+        </div> -->
+    </div>
+
+    <footer>
+        &copy; 2023 Seguridad Informática
+    </footer>
+</body>
+</html>
