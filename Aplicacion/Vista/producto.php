@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="style2.css">
     <script src="../configuraciones.js"></script>
     <title>Tienda de Productos</title>
 
@@ -16,15 +16,15 @@
     <div class="container">
         <form id="productForm"  action="../Modelo/insertar.php" method="POST">
             <label for="productName">Nombre del Producto:</label>
-            <input type="text" id="productName" required>
+            <input type="text" name="productName" id="productName" required>
 
             <label for="productPrice">Precio del Producto:</label>
-            <input type="number" id="productPrice" step="1.00" required>
+            <input type="number" name="productPrice" id="productPrice" step="1.00" required>
 
             <label for="productImage">Categoria:</label>
-            <input type="url" id="productCat" required>
+            <input type="url" name="productCat" id="productCat" required>
 
-            <center><button type="button" onclick="registro()">Agregar Producto</button></center>
+            <center><button type="submit">Agregar Producto</button></center>
         </form>
 
         <!-- <div class="product">
