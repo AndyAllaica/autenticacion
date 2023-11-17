@@ -1,13 +1,14 @@
+
+
 body{
     padding:0;
     margin:0;
-  }
+}
 
 .vid-container{
 position:relative;
 height:100vh;
 overflow:hidden;
-background-image: url('Fondo.jpg');
 }
 
 .bgvid{
@@ -24,17 +25,17 @@ position:absolute;
 top:calc(50vh - 200px);
 left:calc(50vw - 200px);
 overflow:hidden;
-background-image: url('Fondo.jpg');
+background-image: url('Fondo2.jpeg');
 }
 
-.bgvid.inner{
+/*.bgvid.inner{
 
-filter: url("Fondo.jpg");
+filter: url("Fondo2.jpeg");
 -webkit-filter:blur(10px);
 -ms-filter: blur(10px);
 -o-filter: blur(10px);
 filter:blur(10px);
-}
+}*/
 
 .box{
 position:absolute;
