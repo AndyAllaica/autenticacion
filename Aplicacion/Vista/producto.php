@@ -11,6 +11,8 @@
 <body>
     <header>
         <h1>Agregar Productos</h1>
+        <button id="miBoton">Salir</button>
+        
     </header>
 
     <div class="container">

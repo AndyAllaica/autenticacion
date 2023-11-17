@@ -6,6 +6,19 @@ body {
     background-size: cover;
 }
 
+#miBoton {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #a8081e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 header {
     background-color: #180B1D;
     color: #e50c29;
