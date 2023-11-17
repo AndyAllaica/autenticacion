@@ -27,7 +27,7 @@ if ($resultado) {
     ?>
     <script>
       alert("El producto se ha insertado correctamente.")
-      //window.location.href = "../Vista/producto.php";
+      window.location.href = "../Vista/producto.php";
     </script>
     <?php
 } else {
@@ -35,7 +35,7 @@ if ($resultado) {
     ?>
     <script>
       alert("Error en agregar el producto.")
-      //window.location.href = "../Vista/producto.php";
+      window.location.href = "../Vista/producto.php";
     </script>
     <?php
 }
