@@ -1,4 +1,6 @@
 function conectarMySQL() {
+    var usuario = document.getElementById("email").value
+    var contra = document.getElementById("password").value
     const mysql = require('mysql')
     const conexion = mysql.createConnection({
         host: 'localhost',
@@ -12,7 +14,7 @@ function conectarMySQL() {
         console.log('Conexion establecida')
     })
 
-    conexion.query('SELECT * FROM tabla WHERE idTabla=1 AND texto=\'Hola\'', (err, rows) => {
+    conexion.query("SELECT * FROM tabla WHERE user='" + usuario + "' AND contra='" + contra + "'", (err, rows) => {
         if (err) {
             console.error('Error en la autenticación:', err);
             // Mostrar mensaje de autenticación fallida
@@ -25,4 +27,8 @@ function conectarMySQL() {
 
         conexion.end();
     })
+}
+
+function registro(){
+
 }

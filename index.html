@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="configuraciones.js"></script>
     <script src="validacion.js"></script>
+    <script src="conexion.js"></script>
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <h2>Inicio de Sesión</h2>
         <form id="datos">
           <div class="group">      
-            <input type="text" required id="nombre">
+            <input type="text" required id="email">
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Correo Electrónico</label>
@@ -30,7 +31,7 @@
             <i class="fas fa-info-circle" ></i>
             <button class="btn btn-primary" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
           </div>
-          <button type="submit">Iniciar Sesión</button>
+          <button type="submit" onclick="conectarMySQL()">Iniciar Sesión</button>
         </form>
         
       </div>
