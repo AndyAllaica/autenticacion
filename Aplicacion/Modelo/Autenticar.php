@@ -28,10 +28,12 @@ if (mysqli_num_rows($resultado) > 0) {
      header("Location: ../Vista/producto.php");
      exit();
  } else {
+     header("Location: ../index.php");
      ?>
           <script>
                alert("El usuario no se encuentra registrado");
           </script>
+          
      <?php
  }
 ?>
